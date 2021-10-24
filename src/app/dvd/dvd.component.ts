@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Dvd } from '../models/dvd';
+import { DvdService } from '../services/dvd.service';
 
 @Component({
   selector: 'app-dvd',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DvdComponent implements OnInit {
 
-  constructor() { }
+  dvds$:Observable<Dvd[]>;
+  constructor(private devdService:DvdService) { }
 
   ngOnInit(): void {
+    this.dvds$ = this.devdService.dvds$
   }
 
 }

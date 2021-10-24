@@ -11,6 +11,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { DvdDetailComponent } from './dvd/dvd-detail/dvd-detail.component';
+
 
 
 // const appRoutes :Routes = [
@@ -24,7 +28,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     BookComponent,
     DvdComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DvdDetailComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,9 @@ import { AppRoutingModule } from './app-routing.module';
     FlexLayoutModule,
     MatButtonModule,
     // RouterModule.forRoot(appRoutes),
-    AppRoutingModule
+    AppRoutingModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
