@@ -10,14 +10,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
-const appRoutes :Routes = [
-  {path:'dvds', component: DvdComponent},
-  {path:'books', component: BookComponent},
-  {path:'', pathMatch:'full', redirectTo: 'dvds'},
-  {path:'**', component: PageNotFoundComponent},
-]
+// const appRoutes :Routes = [
+//   {path:'dvds', component: DvdComponent},
+//   {path:'books', component: BookComponent},
+//   {path:'', pathMatch:'full', redirectTo: 'dvds'},
+//   {path:'**', component: PageNotFoundComponent},
+// ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ const appRoutes :Routes = [
     MatToolbarModule,
     FlexLayoutModule,
     MatButtonModule,
-    RouterModule.forRoot(appRoutes)
+    // RouterModule.forRoot(appRoutes),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
