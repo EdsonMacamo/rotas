@@ -16,6 +16,7 @@ const appRoutes :Routes = [
   {path:'dvds', component: DvdComponent},
   {path:'books', component: BookComponent},
   {path:'', pathMatch:'full', redirectTo: 'dvds'},
+  {path:'**', component: PageNotFoundComponent},
 ]
 @NgModule({
   declarations: [
