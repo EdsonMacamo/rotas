@@ -14,6 +14,11 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { DvdDetailComponent } from './dvd/dvd-detail/dvd-detail.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { DvdFormComponent } from './dvd/dvd-form/dvd-form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input'
 
 
 
@@ -30,6 +35,7 @@ import { DvdDetailComponent } from './dvd/dvd-detail/dvd-detail.component';
     DvdComponent,
     PageNotFoundComponent,
     DvdDetailComponent,
+    DvdFormComponent,
 
   ],
   imports: [
@@ -41,7 +47,12 @@ import { DvdDetailComponent } from './dvd/dvd-detail/dvd-detail.component';
     // RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
